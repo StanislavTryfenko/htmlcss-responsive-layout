@@ -1,17 +1,57 @@
-:root
-{
+:root{
 
+}
+
+*{
+    margin: 0%;
 }
 
 /* #region common */
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
 /* #endregion */
 
 /* #region utility */
 
+.container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.button{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
 /* #endregion */
 
 /* #region header */
+
+header{
+    background-color: blue;
+    padding: 1rem 0;
+
+}
+
+.header-links{
+    display: flex;
+    gap: 1rem;
+    display: none;
+
+}
+
 
 /* #endregion */
 
@@ -47,12 +87,18 @@
 
 /* #endregion */
 
-@media screen and (min-witdh: 768px)
+@media screen and (min-width: 768px)
 {
 
 }
 
-@media screen and (min-witdh: 1440px)
+@media screen and (min-width: 1024px)
 {
+ .header-links{
+    display: flex;
+ }
 
+ .fa-bars{
+    display: none;
+ }
 }
