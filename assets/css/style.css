@@ -2,7 +2,7 @@
 
 }
 
-*{
+*, *::before, *::after{
     margin: 0%;
     box-sizing: border-box;
     padding: 0%;
@@ -31,7 +31,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
     width: 70%;
 }
 
@@ -161,6 +161,7 @@ header{
     background-color: blueviolet;
     border-radius: 32px;
     padding: 1.5rem;
+    margin-top: 1rem;
     & p{
         padding: 1rem 0;
     }
@@ -170,13 +171,40 @@ header{
     border-radius: 50%;
     aspect-ratio: 1;
     width: 80%;
-    block-size: fit-content;
-    
+    object-fit: cover;
 }
 
 /* #endregion */
 
-/* #region s4 */
+/* #region benefits */
+
+#benefits{
+    background-color: blueviolet;
+    & .container{
+        &> h2{
+            text-align: center;
+            color: white;
+            margin: 2rem 0;
+        }
+    }
+}
+
+.benefit-card{
+    background-color: white;
+    border-radius: 32px;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    & a{
+        text-align: center;
+        width: 60%;
+        background-color: blueviolet;
+        padding: 1rem 2rem;
+        border-radius: 32px;
+    }
+}
 
 /* #endregion */
 
@@ -196,6 +224,10 @@ header{
 
 @media screen and (min-width: 768px)
 {
+    .container{
+        width: 90%;
+    }
+
     .row-md{
         display: flex;
         gap: 1rem;
@@ -223,17 +255,38 @@ header{
         }
     }
 
+    .card-testimonial{
+        display: flex;
+        gap: 2rem;
+        & .img-testimonial{
+            width: 20%;
+        }
+        & p{
+            text-align: left;
+        }
+        & h4{
+            text-align: left;
+        }
+    }
 
 }
 
 @media screen and (min-width: 1200px)
 {
+ .container{
+    width: 75%;
+ }
+
  .header-links{
     display: flex;
  }
 
  .fa-bars{
     display: none;
+ }
+
+ .col-big-4{
+    width: calc((100% / 12) * 4);
  }
 
  .col-big-6{
