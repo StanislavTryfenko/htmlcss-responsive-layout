@@ -39,8 +39,6 @@ img{
     text-align: center;
 }
 
-
-
 .col-sm-12{
     width: 100%;
 }
@@ -139,6 +137,10 @@ header{
     gap: 2rem;
     justify-content: center;
     text-align: center;
+    & p{
+        font-style: italic;
+        margin: 0 2rem;
+    }
 }
 
 .fa-arrow-down-long{
@@ -149,7 +151,28 @@ header{
 
 /* #endregion */
 
-/* #region s3 */
+/* #region testimonials */
+
+#testimonials{
+
+}
+
+.card-testimonial{
+    background-color: blueviolet;
+    border-radius: 32px;
+    padding: 1.5rem;
+    & p{
+        padding: 1rem 0;
+    }
+}
+
+.img-testimonial{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 80%;
+    block-size: fit-content;
+    
+}
 
 /* #endregion */
 
@@ -173,7 +196,7 @@ header{
 
 @media screen and (min-width: 768px)
 {
-    .row{
+    .row-md{
         display: flex;
         gap: 1rem;
     }
@@ -219,4 +242,21 @@ header{
  .flex-big{
     display: flex;
  }
+
+ .strategic{
+    justify-content: space-between;
+
+    & img{
+        margin-bottom: 10rem;  
+    }
+}
+
+ .developement{
+    margin-top: 10%;
+ } 
+
+ .row-big{
+    display: flex;
+    gap: 1rem;
+}
 }
