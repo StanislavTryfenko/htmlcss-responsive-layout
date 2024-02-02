@@ -4,6 +4,8 @@
 
 *{
     margin: 0%;
+    box-sizing: border-box;
+    padding: 0%;
 }
 
 /* #region common */
@@ -16,6 +18,10 @@ a{
 li{
     list-style: none;
 }
+
+img{
+    max-width: 100%;
+}
 /* #endregion */
 
 /* #region utility */
@@ -25,15 +31,18 @@ li{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-self: center;
     width: 70%;
 }
 
-.button{
-    background-color: white;
-    color: black;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+.text-center{
+    text-align: center;
+}
+
+
+
+.col-sm-12{
+    width: 100%;
 }
 /* #endregion */
 
@@ -42,22 +51,64 @@ li{
 header{
     background-color: blue;
     padding: 1rem 0;
-
 }
 
 .header-links{
     display: flex;
     gap: 1rem;
     display: none;
-
+    align-items: center;
 }
 
+.button{
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
 
 /* #endregion */
 
 /* #region main */
 
-/* #region s1 */
+/* #region demo */
+
+#demo{
+    margin: 2rem 0;  
+}
+
+.demo-card{
+    background-color: aquamarine;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    
+    & h3{
+        color: blue;
+        margin-bottom: 2rem;
+    }
+}
+
+.pb0{
+    padding-bottom: 0;
+}
+
+.i-demo{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.app-store{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    margin: 1rem 0;
+}
+
+
 
 /* #endregion */
 
@@ -89,10 +140,37 @@ header{
 
 @media screen and (min-width: 768px)
 {
+    .row{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .col-md-8{
+        width: calc((100% / 12) * 8);
+    }
+
+    .col-md-4{
+        width: calc((100% / 12) * 4);
+    }
+
+    .col-md-6{
+        width: 50%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
+
+    .demo-card{
+        & img{
+            padding-bottom: -2rem;
+        }
+    }
+
 
 }
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1200px)
 {
  .header-links{
     display: flex;
@@ -100,5 +178,12 @@ header{
 
  .fa-bars{
     display: none;
+ }
+
+ .col-big-6{
+    width: 50%;
+ }
+ .flex-big{
+    display: flex;
  }
 }
