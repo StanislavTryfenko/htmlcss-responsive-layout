@@ -22,6 +22,10 @@ li{
 img{
     max-width: 100%;
 }
+
+section{
+    padding: 3rem 0;
+}
 /* #endregion */
 
 /* #region utility */
@@ -211,11 +215,55 @@ header{
 
 /* #endregion */
 
-/* #region s5 */
+/* #region about-us */
+
+.about-us-card{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    & img{
+        border-radius: 50%;
+        aspect-ratio: 1;
+        width: 60%;
+        object-fit: cover;
+    }
+    & a{
+        align-self: flex-start;
+        text-align: center;
+        background-color: blueviolet;
+        padding: 1rem 2rem;
+        border-radius: 32px;
+    }
+    & p{
+        line-height: 2;
+    }
+    & h3{
+        line-height: 1.5;
+    }
+}
 
 /* #endregion */
 
-/* #region s6 */
+/* #region get-start */
+
+#get-start{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    & p{
+        
+        text-align: center;
+    }
+    & .button{
+        color: blueviolet;
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 32px;
+    }
+}
 
 /* #endregion */
 
@@ -267,6 +315,10 @@ header{
         }
     }
 
+    #get-start{
+        & p{width: 50%;}
+    }
+
 }
 
 @media screen and (min-width: 1200px)
@@ -300,11 +352,15 @@ header{
     & img{
         margin-bottom: 10rem;  
     }
-}
+ }
 
  .developement{
     margin-top: 10%;
  } 
+
+ #get-start{
+    & p{width: 30%;}
+ }
 
 
 }
