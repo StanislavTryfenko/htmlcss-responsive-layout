@@ -35,6 +35,12 @@ img{
     width: 70%;
 }
 
+.row{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .text-center{
     text-align: center;
 }
@@ -79,8 +85,6 @@ header{
     background-color: aquamarine;
     border-radius: 3rem;
     padding: 2rem;
-    margin-bottom: 1rem;
-    
     & h3{
         color: blue;
         margin-bottom: 2rem;
@@ -195,8 +199,7 @@ header{
     padding: 2rem;
     display: flex;
     flex-flow: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 1rem;
     & a{
         text-align: center;
         width: 60%;
@@ -228,21 +231,16 @@ header{
         width: 90%;
     }
 
-    .row-md{
-        display: flex;
-        gap: 1rem;
-    }
-
     .col-md-8{
-        width: calc((100% / 12) * 8);
+        width: calc((100% / 12) * 8 - 1rem);
     }
 
     .col-md-4{
-        width: calc((100% / 12) * 4);
+        width: calc((100% / 12) * 4 - 1rem);
     }
 
     .col-md-6{
-        width: 50%;
+        width: calc(50% - 2rem);
     }
 
     .col-md-12{
@@ -286,11 +284,11 @@ header{
  }
 
  .col-big-4{
-    width: calc((100% / 12) * 4);
+    width: calc((100% / 12) * 4 - 1rem);
  }
 
  .col-big-6{
-    width: 50%;
+    width: calc(50% - 1rem);
  }
  .flex-big{
     display: flex;
@@ -308,8 +306,5 @@ header{
     margin-top: 10%;
  } 
 
- .row-big{
-    display: flex;
-    gap: 1rem;
-}
+
 }
